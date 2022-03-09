@@ -14,11 +14,13 @@ $(function(){
     $('.menu-jiin a h3').text("JIIN");
     $('.menu-san a h3').text("13");
     $('.about a h3').text("About");
+    $('.copyright p span').text("");
   }
   function originalText(){
     $('.menu-jiin a h3').text("JIIN's Works");
     $('.menu-san a h3').text("13's Works");
     $('.about a h3').text("About Us");
+    $('.copyright p span').text("All rights reserved");
   }
 });
 
