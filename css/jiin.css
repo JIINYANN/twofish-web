@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%;
+}
+.wrap {
+  height: 100%;
+  margin: 0  80px 0;
+  position: relative;
+}
+.header {
+  display: flex;
+}
+.icon-area {
+  position: fixed;
+  z-index: 99;
+  margin-top: 60px;
+  justify-items: center;
+}
+.icon-area .home,
+.icon-area .ig,
+.icon-area .email-item {
+  padding-bottom: 10px;
+}
+.icon-area .home a,
+.icon-area .ig a,
+.icon-area .email-item a {
+  display: block;
+  width: 35px;
+}
+.icon-area .home img,
+.icon-area .ig img,
+.icon-area .email-item img {
+  width: 100%;
+}
+.icon-area .home {
+  padding-bottom: 15px;
+}
+.icon-area .email-item {
+  padding-bottom: 0;
+}
+.title {
+  margin: 80px auto 60px;
+  font-size: small;
+  letter-spacing: 4px;
+}
+.works-area {
+  margin: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.works-area .items {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.works-area .items a {
+  display: block;
+}
+.works-area .items a img {
+  width: 100%;
+}
+.works-area .items a .txt {
+  padding: 5x;
+}
+.footer {
+  display: flex;
+  justify-content: end;
+}
+.msg-form {
+  margin: 20px auto;
+}
+/*# sourceMappingURL=./jiin.css.map */

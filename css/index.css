@@ -1,18 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-body {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
 .wrap {
   height: 100%;
   padding: 50px 100px 20px;
@@ -24,62 +9,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.wrap .msg-form {
-  z-index: 100;
-  position: absolute;
-  padding: 20px;
-  background-color: #fff;
-  border: 2px solid #aaa;
-  border-radius: 10px;
-  display: flex;
-  bottom: 200px;
-  margin: 0 auto;
-  width: 100% ;
-  box-sizing: border-box;
-  display: none;
-}
-.wrap .msg-form .close {
-  position: absolute;
-  right: 20px;
-}
-.wrap .msg-form form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.wrap .msg-form form button {
-  margin: 15px 0 0;
-  width: 50px;
-  padding: 5px;
-  font-size: 12px;
-  border: none;
-  background-color: #fff;
-}
-.wrap .msg-form form button .fa-paper-plane {
-  display: block;
-  line-height: 40px;
-  font-size: 30px;
-  color: #E25716;
-}
-.wrap .msg-form #fs-frm-inputs {
-  display: flex;
-  flex-direction: column;
-  border: none;
-}
-.wrap .msg-form #fs-frm-inputs label {
-  margin: 10px 0;
-}
-.wrap .msg-form #fs-frm-inputs input,
-.wrap .msg-form #fs-frm-inputs textarea {
-  padding: 5px;
-  background-color: #f5f5f5;
-  border: none;
-  color: #2A89AF;
-}
-.wrap .msg-form #fs-frm-inputs input:focus,
-.wrap .msg-form #fs-frm-inputs textarea:focus {
-  outline-color: #E25716;
 }
 .header {
   display: flex;
@@ -252,14 +181,5 @@ a {
   .works-area .page1 .items {
     width: 100%;
   }
-}
-.gray-area {
-  display: none;
-  position: absolute;
-  z-index: 50;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.281);
-  top: 0;
 }
 /*# sourceMappingURL=./index.css.map */

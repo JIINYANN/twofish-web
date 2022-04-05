@@ -1,0 +1,75 @@
+html, body{
+  height:100%;
+}
+.wrap{
+  height: 100%;
+  margin: 0  80px 0;
+  position: relative;
+}
+//header
+.header{
+  display: flex;
+}
+//左側icon區
+.icon-area{
+  position: fixed;
+  z-index: 99;
+  margin-top:60px;
+  justify-items: center; 
+  .home, .ig, .email-item{
+   padding-bottom:10px;
+    a{
+      display: block;
+      width: 35px;
+    }
+    img{
+      width: 100%;
+    }  
+  }
+  .home{
+    padding-bottom:15px;
+  }
+  .email-item{
+   padding-bottom:0;
+   }
+}
+//title 
+.title{
+  margin:80px auto 60px;
+  font-size:small;
+  letter-spacing:4px;
+}
+//作品區
+.works-area{
+  margin:0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  .items{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    a{
+      display: block;
+      img{
+        width: 100%;
+      }
+      .txt{
+        padding:5x;
+      }
+    }
+   
+    
+  }
+}
+//footer
+.footer{
+  display: flex;
+  justify-content: end;
+}
+//message區
+.msg-form{
+  margin:20px auto;
+}
