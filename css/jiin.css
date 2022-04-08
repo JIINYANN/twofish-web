@@ -1,13 +1,9 @@
-html,
-body {
+.jiin-wrap {
   height: 100%;
-}
-.wrap {
-  height: 100%;
-  margin: 0  80px 0;
+  margin: 0 80px 0;
   position: relative;
 }
-.header {
+.j-header {
   display: flex;
 }
 .icon-area {
@@ -20,6 +16,7 @@ body {
 .icon-area .ig,
 .icon-area .email-item {
   padding-bottom: 10px;
+  box-sizing: border-box;
 }
 .icon-area .home a,
 .icon-area .ig a,
@@ -44,31 +41,33 @@ body {
   letter-spacing: 4px;
 }
 .works-area {
-  margin: 0 100px;
+  width: 85%;
+  margin: 50px auto 100px;
   display: flex;
   flex-wrap: wrap;
 }
-.works-area .items {
+.works-area .j-items {
   display: flex;
   flex-direction: column;
   width: 25%;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
 }
-.works-area .items a {
-  display: block;
-}
-.works-area .items a img {
+.works-area .j-items .img img {
   width: 100%;
+  border-radius: 50%;
 }
-.works-area .items a .txt {
-  padding: 5x;
+.works-area .j-items .img img:hover {
+  cursor: pointer;
 }
-.footer {
+.works-area .j-items .txt {
+  padding: 8px 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.j-footer {
   display: flex;
   justify-content: end;
-}
-.msg-form {
-  margin: 20px auto;
+  padding-bottom: 30px;
 }
 /*# sourceMappingURL=./jiin.css.map */

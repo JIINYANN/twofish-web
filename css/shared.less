@@ -17,15 +17,16 @@ a{
 //message表單
 .msg-form{
   z-index: 100;
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   padding:20px;
   background-color: #fff;
   border:2px solid #aaa;
   border-radius: 10px;
   display: flex;
-  bottom:200px;
-  margin:0 auto;
-  width:100% ;
+  // bottom:200px;
+  margin:200px auto 0;
+  width:70% ;
   box-sizing: border-box;
   .close{
     position: absolute;
@@ -83,3 +84,187 @@ a{
   background-color: rgba(0, 0, 0, 0.281);
   top:0;
 }
+
+
+//不同視窗尺寸的調整
+@media screen and (min-width:1280px) {
+  .header .left-menu .menu-jiin a{
+    display: block;
+    padding-right: 40px;
+  }
+  .header .right-menu .menu-san a{
+   display: block;
+   padding-left: 40px;
+  }
+}
+@media screen and (max-width:1024px) {
+  //jiin頁面
+  .j-header{
+    margin-top:30px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .wrap{
+   padding-top:150px;
+   position: relative;
+  }
+  .container .header{
+    padding-top: 28px;
+  }
+  .header .logo{
+      position: absolute;
+      top:-95px;
+      right:0;
+      justify-content: end;
+      width: 88px;
+      
+  }
+  .header .left-menu .home-icon{
+    position: absolute;
+    left:0;
+    top:-44px;
+  }
+  .header .right-menu {
+    width: 600px;
+  }
+  //jiin頁面
+  .works-area{
+    .j-items{
+      width: 33%;
+    }
+  }
+  
+}
+@media screen and (max-width:768px) {
+  //作品圖片變3個為一排
+  .works-area{
+    //index頁面
+    .page1{
+      .items{
+        width: 33%;
+        }
+    }
+    
+  }
+  .jiin-wrap{
+    .j-footer{
+      justify-content: center;
+    }
+  }
+  //jiin頁面
+  .jiin-wrap{
+    margin:0 50px;
+    //jiin頁面
+    .j-header{
+      margin-top:0px;
+    }
+    .works-area{
+      margin:30px auto 100px;
+    }
+  }
+}
+@media screen and (max-width:750px) {
+  .wrap{
+    padding: 150px 60px 20px;
+  }
+  .footer{
+    flex-direction: column;
+    .copyright{
+      align-self: flex-start;
+    }
+  }
+  
+}
+@media screen and (max-width:650px) {
+  .header .right-menu {
+    width: 700px;
+  }
+  //jiin頁面
+  .jiin-wrap{
+    margin:0 30px;
+    .title{
+      letter-spacing:2px;
+    }
+    .works-area{
+      margin-top: 0;
+    }
+  }
+    
+    
+
+}
+@media screen and (max-width:500px) {
+  .wrap{
+    padding: 100px 50px 20px;
+  }
+  .header .logo{
+    width: 66px;
+    top:-72px;
+  }
+  .works-area{
+    .page1{
+      .items{
+        width:50%;
+        }
+    }
+    //jiin頁面
+    .j-items{
+      width: 50%;
+    }
+  }
+  .footer .link-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .jiin-ig-item, .san-ig-item, .email-item{
+      flex-direction:column;
+      justify-content: center;
+      font-size: smaller;
+      a{
+        margin-right: 0;
+      }
+    }
+  }
+  .footer .copyright{
+    font-size: smaller;
+  }
+  //jiin頁面
+  .jiin-wrap{
+    .works-area{
+      margin:0 auto 100px;
+    }
+  }
+}
+@media screen and (max-width:450px) {
+ //jiin頁面
+ .j-header{
+  .title{
+    margin:60px 80px 50px;
+    text-align: center;
+  }
+ }
+}
+@media screen and (max-width:400px) {
+  .works-area{
+    .page1{
+      .items{
+        width:100%;
+        }
+    }
+    //jiin頁面
+    .j-items{
+      width: 100%;
+    }
+  }
+  //jiin頁面
+  .j-header{
+    .title{
+      margin:50px 60px 30px;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
