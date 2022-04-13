@@ -27,6 +27,9 @@ $(function(){
      if($(window).width() < 750){
        $(".j-header .title h1").replaceWith("<h2>JIIN's &nbsp;Featured &nbsp;Works</h2>")
      }
+     if($(window).width() < 750){
+      $(".s-header .title h1").replaceWith("<h2>13's &nbsp;Weaving &nbsp;Works</h2>")
+    }
   })
 
   // 點擊message開啟表單
@@ -44,7 +47,7 @@ $(function(){
     $("img",this).css("Opacity","50%")
   })
   //jiin頁面的部份
-  $(".works-area .j-items .img img").mouseenter(function(){
+  $(".works-area .js-items .img img").mouseenter(function(){
     $(this).css("Opacity","50%")
   })
   //滑鼠移出作品畫面變亮
@@ -53,7 +56,7 @@ $(function(){
     $("img",this).css("Opacity","100%")
   })
   //jiin頁面的部份
-  $(".works-area .j-items .img img").mouseleave(function(){
+  $(".works-area .js-items .img img").mouseleave(function(){
     $(this).css("Opacity","100%")
   })
 });

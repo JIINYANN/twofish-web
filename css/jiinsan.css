@@ -1,9 +1,10 @@
-.jiin-wrap {
+.js-wrap {
   height: 100%;
   margin: 0 80px 0;
   position: relative;
 }
-.j-header {
+.j-header,
+.s-header {
   display: flex;
 }
 .icon-area {
@@ -46,28 +47,28 @@
   display: flex;
   flex-wrap: wrap;
 }
-.works-area .j-items {
+.works-area .js-items {
   display: flex;
   flex-direction: column;
   width: 25%;
   padding: 15px;
   box-sizing: border-box;
 }
-.works-area .j-items .img img {
+.works-area .js-items .img img {
   width: 100%;
   border-radius: 50%;
 }
-.works-area .j-items .img img:hover {
+.works-area .js-items .img img:hover {
   cursor: pointer;
 }
-.works-area .j-items .txt {
+.works-area .js-items .txt {
   padding: 8px 0 0;
   box-sizing: border-box;
   text-align: center;
 }
-.j-footer {
+.js-footer {
   display: flex;
   justify-content: end;
   padding-bottom: 30px;
 }
-/*# sourceMappingURL=./jiin.css.map */
+/*# sourceMappingURL=./jiinsan.css.map */
