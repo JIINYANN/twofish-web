@@ -52,11 +52,18 @@
   display: flex;
 }
 .works-area {
+  position: relative;
   margin: 50px 0;
+  display: flex;
+  overflow: hidden;
 }
 .works-area .page1 {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  flex-shrink: 0;
+  left: 0;
 }
 .works-area .page1 .items {
   width: 25%;

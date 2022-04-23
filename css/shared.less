@@ -84,6 +84,94 @@ a{
   background-color: rgba(0, 0, 0, 0.281);
   top:0;
 }
+//works-show的部分
+.works-area{
+  position: relative;
+  justify-content:center;
+  .works-show{
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    width: 75%;
+    padding:20px 20px;
+    box-sizing: border-box;
+    border: 2px solid #666;
+    background-color: #fff;
+    
+    .works-img{
+      position: relative;
+      padding-right: 20px;
+      width: 60%;
+      height: 100%;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .works-img::before{
+      content:url(/imgs/left-arrow.svg);
+      width: 25px;
+      height: 25px;
+      background-color: #fff;
+      padding:2px 3px 3px 1px;
+      left:10px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      position:absolute;
+      text-align: center;
+      top:0;
+      bottom:0;
+      margin:auto;
+      cursor: pointer;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.361);
+    }
+    .works-img::after{
+      content:url(/imgs/right-arrow.svg);
+      width: 25px;
+      height: 25px;
+      background-color: #fff;
+      padding:2px 1px 2px 2px;
+      right:30px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      position:absolute;
+      text-align: center;
+      top:0;
+      bottom:0;
+      margin:auto;
+      cursor: pointer;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.361);
+    }
+    .works-txt{
+      width: 40%;
+      padding: 10px 10px 0 0;
+      h3{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 10px 0;
+      }
+      p{
+        padding: 10px 0;
+        font-weight: bold;
+        span{
+          font-size:smaller;
+          font-weight: normal;
+        }
+      };
+    }
+    a{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      background-color: #666;
+      color:#fff;
+      right:-22px;
+      top: -2px;
+    }
+    display:none;//隱藏
+  }
+}
 
 
 //不同視窗尺寸的調整
@@ -132,8 +220,47 @@ a{
     .js-items{
       width: 33%;
     }
+    .works-show{
+      .works-img::before{
+        width: 20px;
+        height: 20px; 
+        }
+      .works-img::after{
+        width: 20px;
+        height: 20px;
+       }
+    }
   }
   
+}
+@media screen and (max-width:900px) {
+  //works-show的部分
+  .works-area{
+    
+    .works-show{
+      flex-direction: column;
+      .works-img, .works-txt{
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        margin:auto;
+        width: 95%;
+      }
+      .works-img::after{
+        right:10px;
+      }
+      
+      .works-img{
+        padding-right: 0px;
+      }
+      .works-txt{
+        h3, p{
+          padding:5px 0;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width:768px) {
   //作品圖片變3個為一排
@@ -212,6 +339,14 @@ a{
     .js-items{
       width: 50%;
     }
+    //works-show的部分
+    .works-show{
+      .works-txt{
+        p{
+          font-size:smaller;
+        }
+      }
+    }
   }
   .footer .link-wrap{
     display: flex;
@@ -255,6 +390,20 @@ a{
     //jiinsan頁面
     .js-items{
       width: 100%;
+    }
+    .works-show{
+      .works-img::before{
+        width: 15px;
+        height: 15px; 
+        left:5px;
+        padding:0px 2px 2px 0px;
+        }
+      .works-img::after{
+        width: 15px;
+        height: 15px;
+        right:5px;
+        padding:0px 0px 2px 2px;
+       }
     }
   }
   //jiin&san頁面

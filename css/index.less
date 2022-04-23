@@ -70,10 +70,18 @@
 
 //作品展示區
 .works-area{
+  position: relative;
   margin: 50px 0;
+  display: flex;
+  overflow: hidden;
+ 
   .page1{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    flex-shrink:0;
+    left:0;
     
     .items{
       width: 25%;
@@ -86,6 +94,7 @@
       }
     }
   }
+  
 }
 
 //footer區
