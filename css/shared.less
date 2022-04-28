@@ -88,11 +88,11 @@ a{
 .works-area{
   position: relative;
   justify-content:center;
-  .works-show{
+  .jworks-show{
     z-index: 1000;
     position: absolute;
     display: flex;
-    width: 75%;
+    width: 50%;
     padding:20px 20px;
     box-sizing: border-box;
     border: 2px solid #666;
@@ -101,50 +101,41 @@ a{
     .works-img{
       position: relative;
       padding-right: 20px;
-      width: 60%;
+      width: 70%;
       height: 100%;
       overflow: hidden;
-      img{
+      
+      .img-show{
         width: 100%;
-        height: 100%;
+        overflow: hidden;
+        
+      }
+      img{
+         width: 500%;
+         height: 100%;
+         animation: move steps(5) 10s  2s infinite paused ;
+         @keyframes move {
+            from{
+              transform: translateX(0%);
+            }
+           to{
+            transform:translate(-100%);
+           }
+         }
+      }
+      a{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        top: 0;
+        bottom: 0;
+        margin:auto 0;
       }
     }
-    .works-img::before{
-      content:url(/imgs/left-arrow.svg);
-      width: 25px;
-      height: 25px;
-      background-color: #fff;
-      padding:2px 3px 3px 1px;
-      left:10px;
-      box-sizing: border-box;
-      border-radius: 50%;
-      position:absolute;
-      text-align: center;
-      top:0;
-      bottom:0;
-      margin:auto;
-      cursor: pointer;
-      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.361);
-    }
-    .works-img::after{
-      content:url(/imgs/right-arrow.svg);
-      width: 25px;
-      height: 25px;
-      background-color: #fff;
-      padding:2px 1px 2px 2px;
-      right:30px;
-      box-sizing: border-box;
-      border-radius: 50%;
-      position:absolute;
-      text-align: center;
-      top:0;
-      bottom:0;
-      margin:auto;
-      cursor: pointer;
-      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.361);
-    }
+   
     .works-txt{
-      width: 40%;
+      width: 30%;
       padding: 10px 10px 0 0;
       h3{
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -169,7 +160,9 @@ a{
       right:-22px;
       top: -2px;
     }
-    display:none;//隱藏
+    
+    visibility: hidden;//隱藏
+   
   }
 }
 
@@ -185,10 +178,18 @@ a{
    padding-left: 40px;
   }
 }
+
+@media  screen and (max-width: 1280px){
+  .works-area{
+    .jworks-show{
+      width: 60%;
+    }
+  }
+}
 @media screen and (max-width:1024px) {
   //jiin&san頁面
   .j-header, .s-header{
-    margin-top:30px;
+    padding-top:30px;
   }
 }
 @media screen and (max-width:1000px) {
@@ -220,16 +221,6 @@ a{
     .js-items{
       width: 33%;
     }
-    .works-show{
-      .works-img::before{
-        width: 20px;
-        height: 20px; 
-        }
-      .works-img::after{
-        width: 20px;
-        height: 20px;
-       }
-    }
   }
   
 }
@@ -237,8 +228,9 @@ a{
   //works-show的部分
   .works-area{
     
-    .works-show{
+    .jworks-show{
       flex-direction: column;
+      border:1px solid #666;
       .works-img, .works-txt{
         left:0;
         right:0;
@@ -246,9 +238,6 @@ a{
         bottom:0;
         margin:auto;
         width: 95%;
-      }
-      .works-img::after{
-        right:10px;
       }
       
       .works-img{
@@ -258,6 +247,10 @@ a{
         h3, p{
           padding:5px 0;
         }
+      }
+      a{
+        right: -21px;
+        top: -1px;
       }
     }
   }
@@ -270,8 +263,7 @@ a{
       .items{
         width: 33%;
         }
-    }
-    
+    }   
   }
   //jiinsan頁面
   .js-wrap{
@@ -287,7 +279,7 @@ a{
       margin-top:0px;
     }
     .works-area{
-      margin:30px auto 100px;
+      margin:30px auto 100px; 
     }
   }
 }
@@ -300,8 +292,7 @@ a{
     .copyright{
       align-self: flex-start;
     }
-  }
-  
+  } 
 }
 @media screen and (max-width:650px) {
   .header .right-menu {
@@ -317,9 +308,6 @@ a{
       margin-top: 0;
     }
   }
-    
-    
-
 }
 @media screen and (max-width:500px) {
   .wrap{
@@ -340,7 +328,7 @@ a{
       width: 50%;
     }
     //works-show的部分
-    .works-show{
+    .jworks-show{
       .works-txt{
         p{
           font-size:smaller;
@@ -371,6 +359,21 @@ a{
     }
   }
 }
+@media screen and (min-width:500px)and(max-width:1024px){
+  .works-area{
+    .jworks-show{
+      width: 70%;
+    }
+  }
+}
+@media screen and (min-width:200px)and(max-width:500px){
+  .works-area{
+    .jworks-show{
+      width: 85%;
+      padding: 15px 15px;
+    }
+  }
+}
 @media screen and (max-width:450px) {
  //jiin&san頁面
  .j-header, .s-header{
@@ -379,7 +382,18 @@ a{
     text-align: center;
   }
  }
+ //jiin的作品動畫視窗比例
+ .works-area{
+  .jworks-show{
+    .works-txt{
+      p{
+        font-size:smaller;
+      }
+    }
+  }
+ } 
 }
+
 @media screen and (max-width:400px) {
   .works-area{
     .page1{
@@ -391,20 +405,7 @@ a{
     .js-items{
       width: 100%;
     }
-    .works-show{
-      .works-img::before{
-        width: 15px;
-        height: 15px; 
-        left:5px;
-        padding:0px 2px 2px 0px;
-        }
-      .works-img::after{
-        width: 15px;
-        height: 15px;
-        right:5px;
-        padding:0px 0px 2px 2px;
-       }
-    }
+     
   }
   //jiin&san頁面
   .j-header, .s-header{

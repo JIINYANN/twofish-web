@@ -50,6 +50,27 @@ $(function(){
   $(".works-area .js-items .img img").mouseenter(function(){
     $(this).css("Opacity","50%")
   })
+  //滑鼠點擊出現作品視窗
+  //j1
+  $(".works-area .js-items .j-img01 img").mousedown(function(){
+    $(".j1 .works-img img").css("animation","move steps(5) 10s 2s infinite running");
+    $(".j1").css("visibility","visible");
+    $(".gray-area").css("display","block");
+  })
+  //j2
+  $(".works-area .js-items .j-img02 img").mousedown(function(){
+    $(".j2 .works-img img").css("animation","move steps(5) 10s 2s infinite running");
+    $(".j2").css("visibility","visible");
+    $(".gray-area").css("display","block");
+  })
+  
+ 
+  //關閉作品視窗的按鈕
+  $(".jworks-show .s-close").mousedown(function(){
+    $(".jworks-show").css("visibility","hidden");
+    $(".gray-area").css("display","none");
+  })
+
   //滑鼠移出作品畫面變亮
    //index頁面的部份
   $(".page1 .items").mouseleave(function(){
